@@ -1,9 +1,22 @@
 // 1. "Ver otro póster": cambia la imagen del estreno de la semana
-const poster = document.getElementById('poster');
+const posters = [
+  { src: 'img/poster1.png', alt: 'Póster: Top 5 mejores películas' },
+  { src: 'img/poster2.png', alt: 'Póster: Movie, Studio Shodwe' },
+];
+
+const posterImg = document.getElementById('poster-img');
 const btnPoster = document.getElementById('btn-poster');
+let posterActual = 0;
+
+// Precarga los pósters para que el cambio sea instantáneo
+posters.forEach((p) => {
+  new Image().src = p.src;
+});
 
 btnPoster.addEventListener('click', () => {
-  poster.classList.toggle('alterno');
+  posterActual = (posterActual + 1) % posters.length;
+  posterImg.src = posters[posterActual].src;
+  posterImg.alt = posters[posterActual].alt;
 });
 
 // 2. "Me interesa": aumenta en uno el contador de esa película
