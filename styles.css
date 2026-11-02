@@ -1,0 +1,192 @@
+/* ===== Variables ===== */
+:root {
+  --negro: #111;
+  --rojo: #e03a30;
+  --gris: #ececec;
+  --gris-texto: #666;
+  --rosa: #f5e1e1;
+  --fuente: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente);
+  color: var(--negro);
+  background: #fff;
+}
+
+/* ===== Encabezado ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 80px;
+  padding: 0 32px;
+  background: var(--negro);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--rojo);
+  text-decoration: none;
+}
+
+.logo span {
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--rojo);
+}
+
+.btn-comprar {
+  padding: 8px 14px;
+  border: none;
+  background: var(--rojo);
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-comprar:hover {
+  filter: brightness(1.15);
+}
+
+/* ===== Distribución principal ===== */
+.contenido {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+h1,
+h2 {
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+/* ===== Placeholder de imagen (caja con X) ===== */
+.placeholder-x {
+  --fondo: #fff;
+  border: 2px solid #333;
+  background:
+    linear-gradient(to top right, transparent calc(50% - 1px), #666 calc(50% - 1px), #666 calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to bottom right, transparent calc(50% - 1px), #666 calc(50% - 1px), #666 calc(50% + 1px), transparent calc(50% + 1px)),
+    var(--fondo);
+}
+
+/* ===== Estreno de la semana ===== */
+.poster {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+/* Segundo póster (cambia al hacer click en "Ver otro póster") */
+.poster.alterno {
+  --fondo: var(--rosa);
+}
+
+.estreno .btn {
+  display: block;
+  margin: 18px auto 0;
+}
+
+/* ===== Botones estilo wireframe ===== */
+.btn {
+  padding: 6px 14px;
+  border: 2px solid var(--negro);
+  background: #fff;
+  box-shadow: 3px 3px 0 var(--negro);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f4f4f4;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--negro);
+}
+
+/* ===== En cartelera ===== */
+.pelicula {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: var(--gris);
+}
+
+.miniatura {
+  flex: 0 0 70px;
+  height: 80px;
+}
+
+.info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.interes {
+  margin: 4px 0 8px;
+  font-size: 0.85rem;
+  color: var(--gris-texto);
+}
+
+.interes strong {
+  color: #333;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .nav {
+    gap: 18px;
+    order: 3;
+    width: 100%;
+  }
+
+  .contenido {
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+  }
+}

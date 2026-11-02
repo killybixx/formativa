@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMax</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <a href="#" class="logo">Cine<span>Max</span></a>
+
+    <nav class="nav">
+      <a href="#">Cartelera</a>
+      <a href="#">Próximos estrenos</a>
+      <a href="#">Promociones</a>
+    </nav>
+
+    <button id="btn-comprar" class="btn-comprar" type="button">Comprar entradas</button>
+  </header>
+
+  <main class="contenido">
+
+    <!-- Estreno de la semana -->
+    <section class="estreno">
+      <h1>Estreno de la semana</h1>
+      <div id="poster" class="poster placeholder-x" role="img" aria-label="Póster del estreno de la semana"></div>
+      <button id="btn-poster" class="btn" type="button">Ver otro póster</button>
+    </section>
+
+    <!-- En cartelera -->
+    <section class="cartelera">
+      <h2>En cartelera</h2>
+
+      <article class="pelicula">
+        <div class="miniatura placeholder-x" role="img" aria-label="Póster de El último viaje"></div>
+        <div class="info">
+          <h3>El último viaje</h3>
+          <p class="interes">Me interesa: <strong class="contador" aria-live="polite">12</strong></p>
+          <button class="btn btn-interesa" type="button">Me interesa</button>
+        </div>
+      </article>
+
+      <article class="pelicula">
+        <div class="miniatura placeholder-x" role="img" aria-label="Póster de Risas en la oficina"></div>
+        <div class="info">
+          <h3>Risas en la oficina</h3>
+          <p class="interes">Me interesa: <strong class="contador" aria-live="polite">8</strong></p>
+          <button class="btn btn-interesa" type="button">Me interesa</button>
+        </div>
+      </article>
+
+      <article class="pelicula">
+        <div class="miniatura placeholder-x" role="img" aria-label="Póster de Planeta salvaje"></div>
+        <div class="info">
+          <h3>Planeta salvaje</h3>
+          <p class="interes">Me interesa: <strong class="contador" aria-live="polite">20</strong></p>
+          <button class="btn btn-interesa" type="button">Me interesa</button>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+</body>
+</html>
